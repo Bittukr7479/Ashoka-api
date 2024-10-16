@@ -8,8 +8,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const apiKey = 'AIzaSyCyYiul_ZgWSdX8cvOhuLlrtyT2L5DOCIw';
-
 const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 const generationConfig = {
